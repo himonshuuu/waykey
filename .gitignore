@@ -1,0 +1,6 @@
+**/out
+**/bin
+*.o
+
+# ill add it after some update
+install.sh 
