@@ -1,3 +1,10 @@
+/*
+ * waykey - Linux keyboard monitoring tool
+ * Copyright (C) 2025 Himangshu Saikia
+ * Licensed under GNU GPL-3.0
+ */
+
+
 #include "../include/keystate.h"
 
 void init_key_states(KeyState *key_states)

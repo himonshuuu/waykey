@@ -1,3 +1,10 @@
+/*
+ * waykey - Linux keyboard monitoring tool
+ * Copyright (C) 2025 Himangshu Saikia
+ * Licensed under GNU GPL-3.0
+ */
+
+
 #include "../include/keymap.h"
 
 const char *key_names[MAX_KEYS] = {0};

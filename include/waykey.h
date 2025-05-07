@@ -1,3 +1,9 @@
+/*
+ * waykey - Linux keyboard monitoring tool
+ * Copyright (C) 2025 Himangshu Saikia
+ * Licensed under GNU GPL-3.0
+ */
+
 #ifndef WAYKEY_H
 #define WAYKEY_H
 

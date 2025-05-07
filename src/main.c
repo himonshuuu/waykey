@@ -1,3 +1,9 @@
+/*
+ * waykey - Linux keyboard monitoring tool
+ * Copyright (C) 2025 Himangshu Saikia
+ * Licensed under GNU GPL-3.0
+ */
+
 
 #include "../include/waykey.h"
 #include "../include/devices.h"

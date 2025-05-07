@@ -1,3 +1,9 @@
+/*
+ * waykey - Linux keyboard monitoring tool
+ * Copyright (C) 2025 Himangshu Saikia
+ * Licensed under GNU GPL-3.0
+ */
+
 #include "../include/devices.h"
 
 int is_device_keyboard(const char *path)
