@@ -25,18 +25,10 @@ A powerful Linux keyboard monitoring tool that captures and processes keyboard i
 - [pthread](https://man7.org/linux/man-pages/man7/pthreads.7.html) - For concurrent processing
 
 
-
-
-
-
 # Installation
-
-
 
 ### AUR Package (Arch-based distributions)
 comming soon... :D
-
-
 
 ## Building from Source
 
@@ -155,21 +147,13 @@ rm waykey.service
 5. **Start waykey service**:
 
 ```bash
-sudo systemctl enable --now waykey.service
-```
-
-6. **Start the Systemd Service**
-
-waykey comes with a systemd service (if installed from AUR) that can be enabled to run at system startup:
-
-```bash
 # Enable and start the service
 sudo systemctl enable --now waykey.service
 
 # Check service status
 sudo systemctl status waykey.service
 ```
-7. **Restart Waybar** to apply changes:
+6. **Restart Waybar** to apply changes:
 
 ```bash
 # If running Waybar directly
