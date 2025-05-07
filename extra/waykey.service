@@ -1,0 +1,11 @@
+# /etc/systemd/system/waykey.service
+[Unit]
+Description=Keycapture input monitor
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/waykey -d device_path
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
