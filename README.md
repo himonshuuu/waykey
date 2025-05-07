@@ -100,6 +100,7 @@ sudo waykey --list
    ```
 
 2. **State File**
+
    ```bash
    # Monitor the state file
    watch -n 0.1 cat /tmp/waykey_state.json
@@ -107,11 +108,8 @@ sudo waykey --list
 
 ## Integration with Waybar
 
-waykey includes a helper script for Waybar integration. To use waykey with Waybar:
-
 1. **Install the waybar-waykey script** (if building from source):
 
-> *Note: If you installed waykey from the AUR package, the script is already installed.*
 ```bash
 # Download the script
 curl -s "https://raw.githubusercontent.com/himonshuuu/waykey/main/extra/waybar.py" -o waybar.py
