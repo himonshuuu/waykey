@@ -44,6 +44,7 @@ sudo apt-get install libinput-dev libjson-c-dev build-essential
 sudo dnf install libinput-devel json-c-devel gcc make
 ```
 
+### Bulding and installation
 ```bash
 git clone https://github.com/himonshuuu/waykey.git
 cd waykey
