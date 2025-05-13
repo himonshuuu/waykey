@@ -16,12 +16,14 @@ A powerful Linux keyboard monitoring tool that captures and processes keyboard i
 - Support for custom device selection
 - Thread-safe state management
 - Clean signal handling for graceful shutdown
+- Configuration file support via ~/.config/waykey/config.yml
 
 ## Requirements
 
 - Linux system
 - [libinput](https://wayland.freedesktop.org/libinput/doc/latest/) - For handling input devices
 - [json-c](https://json-c.github.io/json-c/json-c-0.16/doc/html/index.html) - For JSON state management
+- [libyaml](https://github.com/yaml/libyaml) - For YAML configuration file parsing
 - [pthread](https://man7.org/linux/man-pages/man7/pthreads.7.html) - For concurrent processing
 
 
@@ -178,3 +180,34 @@ This project is licensed under the [GPL-3.0](LICENSE) license.
 ## Acknowledgments
 
 This project was inspired by [siduck/bubbly](https://github.com/siduck/bubbly). Thanks for the idea!
+
+## Configuration
+
+waykey can be configured using a YAML configuration file located at `~/.config/waykey/config.yml`. The configuration file supports the following options:
+
+```yaml
+# Input device path (optional, will auto-detect if not specified)
+device_path: /dev/input/event3
+
+# Named pipe path (default: /tmp/waykey_pipe)
+pipe_path: /tmp/waykey_pipe
+
+# State file path (default: /tmp/waykey_state.json)
+state_path: /tmp/waykey_state.json
+```
+
+To get started with configuration:
+
+1. Create the configuration directory:
+   ```bash
+   mkdir -p ~/.config/waykey
+   ```
+
+2. Copy the example configuration file:
+   ```bash
+   cp config.yml.example ~/.config/waykey/config.yml
+   ```
+
+3. Edit the configuration file to match your preferences.
+
+Note: Command-line arguments will override the configuration file settings.

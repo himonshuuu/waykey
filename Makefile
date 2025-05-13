@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -O2 -Iinclude
-LDFLAGS = -linput -ljson-c -lpthread -lrt
+LDFLAGS = -linput -ljson-c -lpthread -lrt -lyaml
 
 TARGET = waykey
 

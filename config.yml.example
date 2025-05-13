@@ -1,0 +1,11 @@
+# waykey configuration file
+# Copy this file to ~/.config/waykey/config.yml and modify as needed
+
+# Input device path (optional, will auto-detect if not specified)
+device_path: /dev/input/event3 # its event3 for my laptop i don't know about yours
+
+# Named pipe path (default: /tmp/waykey_pipe)
+pipe_path: /tmp/waykey_pipe
+
+# State file path (default: /tmp/waykey_state.json)
+state_path: /tmp/waykey_state.json 

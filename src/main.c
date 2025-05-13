@@ -8,6 +8,7 @@
 #include "../include/waykey.h"
 #include "../include/devices.h"
 #include "../include/keystate.h"
+#include "../include/config.h"
 
 static KeyCaptureConfig config = {0};
 static KeyState key_states[MAX_KEYS];
@@ -41,6 +42,21 @@ int main(int argc, char *argv[])
     config.state_path = DEFAULT_STATE_FILE;
     config.pipe_fd = -1;
     config.running = 1;
+
+    // Load configuration from file
+    Config *file_config = load_config();
+    if (file_config) {
+        if (file_config->device_path) {
+            config.device_path = strdup(file_config->device_path);
+        }
+        if (file_config->pipe_path) {
+            config.pipe_path = strdup(file_config->pipe_path);
+        }
+        if (file_config->state_path) {
+            config.state_path = strdup(file_config->state_path);
+        }
+        free_config(file_config);
+    }
 
     init_key_states(key_states);
     init_key_names();
